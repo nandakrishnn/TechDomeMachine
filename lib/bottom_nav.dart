@@ -19,7 +19,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
 
   List<Widget> get screens {
-    // Ensure workerId is not null before creating the list
+
     return [
     
  const HomeViewPage(),
@@ -46,7 +46,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
           }
           return true;
         },
-        // Use IndexedStack to keep the state of each screen
         child: IndexedStack(
           index: currentIndex,
           children: screens,
