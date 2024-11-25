@@ -4,7 +4,9 @@ import 'package:techdome/constants/height_width.dart';
 import 'package:techdome/widgets/custom_textformfeild.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
+  final coverImageUrl;
+   CustomAppBar({
+   required this.coverImageUrl,
     super.key,
   });
 
@@ -19,11 +21,11 @@ class CustomAppBar extends StatelessWidget {
           duration: const Duration(milliseconds: 1000),
           color: Colors.black.withOpacity(0),
           child: Container(
-            decoration: const BoxDecoration(
+            decoration:  BoxDecoration(
               color: Colors.transparent,
                 image: DecorationImage(
-                    image: AssetImage(
-                        'assets/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_SX300.jpg'),
+                    image: NetworkImage(
+                        coverImageUrl??'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEeFMyNY9fpld3FgyL9U3Eh8Yr0w9zDwc1m32jbPDtan-exwMqeWsx7PLjUptw5eiS_xc&usqp=CAU'),
                     fit: BoxFit.cover)),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -47,11 +49,11 @@ class CustomAppBar extends StatelessWidget {
                         Row(
                           children: [
                             Image.asset(
-                              'assets/logo.png',
+                              'assets/5fdfa98001a201aed81d5119d0456915-removebg-preview.png',
                               height: 70,
                               width: 70,
                             ),
-                            Text(
+                           const Text(
                               'Streamify',
                               style: TextStyle(
                                   color: AppColors.pureWhite,

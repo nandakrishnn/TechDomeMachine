@@ -1,36 +1,55 @@
 import 'package:flutter/material.dart';
 import 'package:techdome/constants/colors.dart';
 import 'package:techdome/constants/height_width.dart';
+import 'package:techdome/widgets/custom_like_button.dart';
 
 class MoviesGridContainer extends StatelessWidget {
+ final String imageUrl;
+ final void Function()? onTap;
+ final String movieName;
   const MoviesGridContainer({
+  required this.onTap,
     super.key,
+    required this.imageUrl,
+    required this.movieName,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: SizedBox(
-            height: 200,
-            width: 150,
-            child: Image.asset(
-              'assets/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_SX300.jpg',
-              fit: BoxFit.cover, 
-            ),
+    return GestureDetector(
+      onTap: (){},
+      child: Column(
+        children: [
+          Stack(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: SizedBox(
+                  height: 200,
+                  width: 150,
+                  child: Image.network(
+                    imageUrl,
+                    fit: BoxFit.cover, 
+                  ),
+                ),
+              ),
+              const Positioned(
+            right: 1,
+                child: CustomLikeButton(isFavorited: true,))
+            ],
           ),
-        ),
-        AppConstants.kheight10,
-        const Text(
-          'Inside Out',
-          style: TextStyle(
-              color: AppColors.pureWhite,
-              fontSize: 18,
-              fontWeight: FontWeight.bold),
-        ),
-      ],
+          AppConstants.kheight10,
+           Text(
+            movieName,
+      
+            overflow: TextOverflow.ellipsis,
+            style:const TextStyle(
+                color: AppColors.pureWhite,
+                fontSize: 15,
+                fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
     );
   }
 }
