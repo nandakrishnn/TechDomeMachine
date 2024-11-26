@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   bloc: ^8.1.4
+  build_runner: ^2.4.11
   cupertino_icons: ^1.0.6
   equatable: ^2.0.5
   flutter:
@@ -36,9 +37,12 @@ dependencies:
   flutter_bloc: ^8.1.6
   google_fonts: ^6.2.1
   google_nav_bar: ^5.0.7
+  hive_flutter: ^1.1.0
+  hive_generator: ^2.0.1
   http: ^1.2.2
   intl: ^0.19.0
   like_button: ^2.0.5
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_lints: ^3.0.0

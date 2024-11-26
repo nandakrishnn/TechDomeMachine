@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:techdome/animations/route_animations.dart';
 import 'package:techdome/constants/colors.dart';
 import 'package:techdome/constants/height_width.dart';
 import 'package:techdome/services/api_helper.dart';
 import 'package:techdome/view/movie_overview.dart';
-import 'package:techdome/viewmodels/bloc/fetch_movie_data_bloc.dart';
+import 'package:techdome/viewmodels/fetch_movie_bloc/fetch_movie_data_bloc.dart';
 import 'package:techdome/widgets/custom_appbar.dart';
 import 'package:techdome/widgets/grid_view_container.dart';
 import 'package:techdome/widgets/random_images.dart';
@@ -67,9 +66,15 @@ class HomeViewPage extends StatelessWidget {
                                       crossAxisCount: 2),
                               itemBuilder: (context, index) {
                                 return MoviesGridContainer(
+                                  imageUrlofWeb: data[index].orginalUrlWeb,
+                                  id: data[index].id,
+                                  imdbId: data[index].imdbId,
+                                  imgeUrl: data[index].posterURL,
+                                  title: data[index].title,
                                   onTap: () => Navigator.of(context)
                                       .push(createRoute(MovieOverview(
-                                        imdbId: data[index].imdbId,
+                                    id: data[index].id,
+                                    imdbId: data[index].imdbId,
                                     imgeUrl: data[index].posterURL,
                                     title: data[index].title,
                                   ))),

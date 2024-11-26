@@ -11,7 +11,7 @@ import 'package:http/http.dart'as http;
     try {
       final response = await http.get(Uri.parse(_apiEnds.url));
       if (response.statusCode == 200) {
-        print('Response Body: ${response.body}'); 
+        debugPrint('Response Body: ${response.body}'); 
   final List<dynamic> data = jsonDecode(response.body);
           return data
               .map((json) => MovieDetials.fromJson(json))
@@ -25,4 +25,4 @@ import 'package:http/http.dart'as http;
       return [];
   }
 }
-}
+ }
