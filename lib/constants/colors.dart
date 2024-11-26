@@ -10,4 +10,5 @@ class AppColors{
     static const Color pureWhite=Colors.white;
     static const Color darkGreen=Color.fromARGB(237, 5, 95, 86);
       static const Color orangeColor=Color.fromARGB(255, 197, 143, 81);
+      static  Color bgColor=Colors.grey.shade900;
 }

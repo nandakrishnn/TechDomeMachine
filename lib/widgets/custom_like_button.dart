@@ -59,6 +59,7 @@ class CustomLikeButton extends StatelessWidget {
             style: TextStyle(
               fontSize: 14,
               color: Colors.white,
+              fontWeight: FontWeight.bold
             ),
           ),
       ],

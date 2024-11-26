@@ -1,17 +1,20 @@
+
 import 'package:flutter/material.dart';
 import 'package:techdome/constants/colors.dart';
 import 'package:techdome/constants/height_width.dart';
 import 'package:techdome/widgets/custom_textformfeild.dart';
 
 class CustomAppBar extends StatelessWidget {
-  final coverImageUrl;
-   CustomAppBar({
-   required this.coverImageUrl,
+ final  coverImageUrl;
+  const CustomAppBar({
+    this.coverImageUrl,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+
+
     return SliverAppBar(
       backgroundColor: Colors.transparent,
       expandedHeight: 440,
@@ -21,11 +24,11 @@ class CustomAppBar extends StatelessWidget {
           duration: const Duration(milliseconds: 1000),
           color: Colors.black.withOpacity(0),
           child: Container(
-            decoration:  BoxDecoration(
+            decoration:   BoxDecoration(
               color: Colors.transparent,
                 image: DecorationImage(
                     image: NetworkImage(
-                        coverImageUrl??'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEeFMyNY9fpld3FgyL9U3Eh8Yr0w9zDwc1m32jbPDtan-exwMqeWsx7PLjUptw5eiS_xc&usqp=CAU'),
+                      coverImageUrl),
                     fit: BoxFit.cover)),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -37,10 +40,10 @@ class CustomAppBar extends StatelessWidget {
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.3), // Shadow color
-                          blurRadius: 8, // Shadow blur
-                          spreadRadius: 2, // Shadow spread
-                          offset: Offset(0, 4), // Shadow position
+                          color: Colors.black.withOpacity(0.3), 
+                          blurRadius: 8, 
+                          spreadRadius: 2, 
+                          offset: const Offset(0, 4), 
                         ),
                       ],
                     ),
