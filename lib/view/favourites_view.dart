@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:techdome/animations/route_animations.dart';
 import 'package:techdome/constants/colors.dart';
 import 'package:techdome/constants/functions.dart';
-import 'package:techdome/view/movie_overview.dart';
 import 'package:techdome/viewmodels/add_fav_bloc/add_movie_fav_bloc.dart';
+import 'package:techdome/widgets/movie_overview_offline.dart';
 
 class FavouritesViewPage extends StatelessWidget {
   const FavouritesViewPage({super.key});
@@ -44,8 +44,8 @@ class FavouritesViewPage extends StatelessWidget {
                         child: ListTile(
                           onTap: () {
                             Navigator.of(context).push(createRoute(
-                                MovieOverview(
-                                    imgeUrl: data[index].orginalWebUrl,
+                                MovieOverviewOffline(
+                                    imgeUrl: data[index].movieImageUrl,
                                     id: data[index].id,
                                     title: data[index].movieTitle,
                                     imdbId:
