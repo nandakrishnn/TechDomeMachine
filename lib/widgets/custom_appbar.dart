@@ -145,7 +145,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                               Container(
                                 color: AppColors.bgColor,
                                 height:
-                                    MediaQuery.of(context).size.height * .389,
+                                    MediaQuery.of(context).size.height * .35,
                                 child: ListView.builder(
                                   itemCount: state.data.length,
                                   itemBuilder: (context, index) {
