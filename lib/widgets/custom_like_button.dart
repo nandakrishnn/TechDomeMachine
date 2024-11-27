@@ -56,7 +56,7 @@ class CustomLikeButton extends StatelessWidget {
      AppConstants.kheight10,
            Text(
             textfav??'',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 14,
               color: Colors.white,
               fontWeight: FontWeight.bold

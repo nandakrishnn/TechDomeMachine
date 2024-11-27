@@ -45,7 +45,6 @@ Future<List<MovieDetials>> fetchMovies(String searchKey) async {
     if (response.statusCode == 200) {
       final List data = json.decode(response.body);
 
-      // Filter movies by title
       final filteredMovies = data.where((movie) {
         final title = movie['title']?.toString().toLowerCase() ?? '';
         return title.contains(searchKey.toLowerCase());

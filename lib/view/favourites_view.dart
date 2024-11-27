@@ -69,6 +69,7 @@ class FavouritesViewPage extends StatelessWidget {
                             ),
                           ),
                           title: Text(
+                            overflow: TextOverflow.ellipsis,
                             data[index].movieTitle!,
                             style: const TextStyle(
                                 color: AppColors.whiteColor,
@@ -81,7 +82,7 @@ class FavouritesViewPage extends StatelessWidget {
                                     .add(DeleteData(data[index].id!));
                     
                             },
-                          icon:  Icon(Icons.favorite),
+                          icon:  const Icon(Icons.favorite),
                             color: Colors.redAccent,
                           ),
                         ),

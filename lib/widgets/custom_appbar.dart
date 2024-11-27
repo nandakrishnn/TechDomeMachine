@@ -31,6 +31,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
       backgroundColor: Colors.transparent,
       expandedHeight: MediaQuery.of(context).size.height * .53,
       pinned: true,
+      floating: true,
       flexibleSpace: FlexibleSpaceBar(
         background: AnimatedContainer(
           duration: const Duration(milliseconds: 1000),
@@ -46,8 +47,14 @@ class _CustomAppBarState extends State<CustomAppBar> {
               decoration: BoxDecoration(
                 color: Colors.transparent,
                 image: DecorationImage(
-                  image: NetworkImage(widget.coverImageUrl),
+                  image: NetworkImage(
+                    
+                    widget.coverImageUrl
+                  
+                  ),
+                
                   fit: BoxFit.cover,
+                  
                 ),
               ),
               child: Padding(
@@ -93,12 +100,8 @@ class _CustomAppBarState extends State<CustomAppBar> {
                             size: 32,
                           ),
                           AppConstants.kheight10,
-                          Container(
-                            width: 30,
-                            height: 30,
-                            color: Colors.blue,
-                          ),
-                          AppConstants.kheight10,
+                        
+
                         ],
                       ),
                     ),
@@ -142,7 +145,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                               Container(
                                 color: AppColors.bgColor,
                                 height:
-                                    MediaQuery.of(context).size.height * .40,
+                                    MediaQuery.of(context).size.height * .389,
                                 child: ListView.builder(
                                   itemCount: state.data.length,
                                   itemBuilder: (context, index) {

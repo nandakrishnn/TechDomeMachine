@@ -9,6 +9,7 @@ import 'package:techdome/viewmodels/fetch_movie_bloc/fetch_movie_data_bloc.dart'
 import 'package:techdome/widgets/custom_appbar.dart';
 import 'package:techdome/widgets/grid_view_container.dart';
 import 'package:techdome/widgets/random_images.dart';
+import 'package:techdome/widgets/shimmer_home.dart';
 
 class HomeViewPage extends StatelessWidget {
   const HomeViewPage({super.key});
@@ -24,7 +25,7 @@ class HomeViewPage extends StatelessWidget {
           listener: (context, state) {},
           builder: (context, state) {
             if (state is FetchMovieDataLoading) {
-              return const Center(child: CircularProgressIndicator());
+              return const Center(child: ShimmerHomeView());
             }
             if (state is FetchMovieDataLoaded) {
               if (state.data.isEmpty) {

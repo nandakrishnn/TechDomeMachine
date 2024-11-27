@@ -14,18 +14,18 @@ final class GetServerDataLoading extends SearchResultsState {}
 
 final class GetServerDataLoaded extends SearchResultsState {
    final List<MovieDetials> data;
-  GetServerDataLoaded(this.data);
+  const GetServerDataLoaded(this.data);
 }
 
 final class GetServerDataFailed extends SearchResultsState {
   final String errorMsg;
 
-   GetServerDataFailed(this.errorMsg);
+   const GetServerDataFailed(this.errorMsg);
 
   @override
   List<Object> get props => [errorMsg];
 }
 class DropdownVisibilityState extends SearchResultsState {
   final bool isVisible;
-  DropdownVisibilityState(this.isVisible);
+  const DropdownVisibilityState(this.isVisible);
 }

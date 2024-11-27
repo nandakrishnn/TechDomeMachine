@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:techdome/constants/colors.dart';
-import 'package:techdome/constants/functions.dart';
+
 import 'package:techdome/constants/height_width.dart';
-import 'package:techdome/models/data_model.dart';
-import 'package:techdome/services/hive_functions.dart';
-import 'package:techdome/viewmodels/add_fav_bloc/add_movie_fav_bloc.dart';
-import 'package:techdome/widgets/custom_like_button.dart';
-import 'package:techdome/widgets/custom_snack.dart';
 
 class MoviesGridContainer extends StatelessWidget {
   final String imageUrl;
@@ -21,7 +15,7 @@ class MoviesGridContainer extends StatelessWidget {
 
   const MoviesGridContainer({
     required this.onTap,
-        required this.imageUrlofWeb,
+    required this.imageUrlofWeb,
     super.key,
     this.imgeUrl,
     this.title,
@@ -36,7 +30,7 @@ class MoviesGridContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Column(
-        // crossAxisAlignment: CrossAxisAlignment.start,
+
         children: [
           Stack(
             children: [
@@ -75,7 +69,6 @@ class MoviesGridContainer extends StatelessWidget {
                   ),
                 ),
               ),
-             
             ],
           ),
           AppConstants.kheight10,

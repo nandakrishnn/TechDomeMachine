@@ -79,12 +79,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
               padding: const EdgeInsets.all(2.0),
               child: GNav(
                 haptic: true,
-                color: AppColors.bottomNavColor,
-                activeColor: AppColors.darkGreen,
+                color: AppColors.orangeColor,
+                activeColor: AppColors.pureWhite,
                 gap: 8,
                 onTabChange: setPage,
                 padding: const EdgeInsets.all(16),
-                textStyle:  const TextStyle(color: AppColors.lightGreyColor,fontSize: 18),
+                textStyle:  const TextStyle(color: AppColors.pureWhite,fontSize: 18),
                 tabBackgroundColor: AppColors.lightGreyColor,
                 selectedIndex: currentIndex, // Ensure correct tab is highlighted
                 tabs:  const [
